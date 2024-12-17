@@ -1,0 +1,669 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its/"
+     xml:base="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:probability-its="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#containsQuestion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#containsQuestion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <rdfs:comment>Links an assessment to its questions.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasAnswer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasAnswer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <rdfs:comment>Links a question to its answer.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasAssessment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasAssessment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <rdfs:comment>Links a student to their assessments.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasExplanation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasExplanation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasKnowledgeLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasKnowledgeLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+        <rdfs:comment>Links a student model to their knowledge level.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasLearningPreference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#hasLearningPreference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences"/>
+        <rdfs:comment>Links a student model to their learning preferences.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#isPartOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <rdfs:comment>Links a question to its assessment.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#answerText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#answerText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#difficultyLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#difficultyLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ProbabilityConcepts"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Represents the difficulty level of a concept.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#explanationText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#explanationText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#preferredLearningStyle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#preferredLearningStyle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Stores the preferred learning style (e.g., “visual”).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#questionText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#questionText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The text of the question.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#score -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#score">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Represents the score of an assessment.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Advance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Advance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#AuditoryLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#AuditoryLearning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#BasicProbability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#BasicProbability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ProbabilityConcepts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Beginner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Beginner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ConditionalProbability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ConditionalProbability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ProbabilityConcepts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Intermediate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Intermediate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#MultipleChoiceQuestion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#MultipleChoiceQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ProbabilityConcepts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ProbabilityConcepts"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ShortAnswerQuestion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#ShortAnswerQuestion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#VisualLearning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#VisualLearning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#LearningPreferences"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Advanced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Advanced">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation1"/>
+        <probability-its:answerText>1/2</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation10"/>
+        <probability-its:answerText>3/8</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation2"/>
+        <probability-its:answerText>1/6</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation3"/>
+        <probability-its:answerText>4/10</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation4"/>
+        <probability-its:answerText>1/6</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation5"/>
+        <probability-its:answerText>1/13</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation6"/>
+        <probability-its:answerText>1/4</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation7"/>
+        <probability-its:answerText>2/10</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation8"/>
+        <probability-its:answerText>2/4</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer"/>
+        <probability-its:hasExplanation rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation9"/>
+        <probability-its:answerText>1/221</probability-its:answerText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <probability-its:containsQuestion rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question1"/>
+        <probability-its:containsQuestion rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question2"/>
+        <probability-its:score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</probability-its:score>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Assessment"/>
+        <probability-its:containsQuestion rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Beginner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Beginner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>A 6-sided die has 6 possible outcomes. Since only one of those outcomes is a 3, the probability is 1/6.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>The total possible outcomes for 3 flips are  2^3 = 8 : HHH, HHT, HTH, HTT, THH, THT, TTH, TTT. The favorable outcomes (exactly two heads) are HHT, HTH, and THH, giving 3 favorable outcomes. The probability is 3/8.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>A 6-sided die has 6 possible outcomes. Since only one of those outcomes is a 3, the probability is 1/6</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>The total number of balls is  4 + 6 = 10 . The number of favorable outcomes (red balls) is 4. Thus, the probability is 4/10</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>There are 36 possible outcomes when rolling two dice. Of these, 6 combinations give a sum of 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1). Thus, the probability is 6/36 which is 1/6.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>There are 4 aces in a standard deck of 52 cards. The probability of drawing an ace is 4/52 or 1/13.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>The possible combinations of two children are: boy-boy, boy-girl, girl-boy, and girl-girl. Only one of these is boy-boy, so the probability is 1/4 .</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>The total number of marbles is  3 + 2 + 5 = 10 . The number of yellow marbles is 2. Thus, the probability is 2/10.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>There are 4 possible outcomes, and 2 of them are favorable (A and C). The probability is 2/4.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Explanation"/>
+        <probability-its:explanationText>he probability of drawing the first king is 4/52 . After removing one king, the probability of drawing another king is 3/51 . The combined probability is 4/52 * 3/51 = 1/221.</probability-its:explanationText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Intermediate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Intermediate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#KnowledgeLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#JaneSmith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#JaneSmith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+        <probability-its:hasKnowledgeLevel rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Intermediate"/>
+        <probability-its:preferredLearningStyle>AuditoryLearning</probability-its:preferredLearningStyle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#JohnDoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#JohnDoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#StudentModel"/>
+        <probability-its:hasKnowledgeLevel rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Beginner"/>
+        <probability-its:preferredLearningStyle>VisualLearning</probability-its:preferredLearningStyle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer1"/>
+        <probability-its:questionText>A coin is flipped. What is the probability of getting heads?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer10"/>
+        <probability-its:questionText>If a fair coin is flipped three times, what is the probability of getting exactly two heads?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer2"/>
+        <probability-its:questionText>A single 6-sided die is rolled. What is the probability of rolling a 3?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer3"/>
+        <probability-its:questionText>A jar contains 4 red balls and 6 blue balls. If one ball is drawn randomly, what is the probability of drawing a red ball?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer4"/>
+        <probability-its:questionText>Two dice are rolled. What is the probability of getting a sum of 7?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer5"/>
+        <probability-its:questionText>A deck of 52 cards is shuffled, and one card is drawn. What is the probability of drawing an ace?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer6"/>
+        <probability-its:questionText>A family has two children. Assuming each child is equally likely to be a boy or a girl, what is the probability that both children are boys?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer7"/>
+        <probability-its:questionText>A bag contains 3 green marbles, 2 yellow marbles, and 5 red marbles. What is the probability of drawing a yellow marble?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer8"/>
+        <probability-its:questionText>A spinner is divided into 4 equal sections labeled A, B, C, and D. What is the probability that the spinner lands on either A or C?</probability-its:questionText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Question"/>
+        <probability-its:hasAnswer rdf:resource="http://www.semanticweb.org/victorpraiz/ontologies/2024/11/probability-its#Answer9"/>
+        <probability-its:questionText>What is the probability of drawing two consecutive kings from a shuffled deck of 52 cards without replacement?</probability-its:questionText>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
