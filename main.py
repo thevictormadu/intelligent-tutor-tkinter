@@ -3,7 +3,7 @@ from tkinter import PhotoImage
 from owlready2 import get_ontology
 
 # Loading the ontology
-ontology_path = "probabilityITS.owl"  # Path to your ontology file
+ontology_path = "probabilityITS.owl"
 onto = get_ontology(ontology_path).load()
 
 # Extracting questions and answers from the ontology
@@ -78,7 +78,7 @@ title_label.pack(pady=10)
 question_label = tk.Label(root, text="Question:", font=("Arial", 18), wraplength=500)
 question_label.pack(pady=10)
 
-answer_entry = tk.Entry(root, font=("Arial", 14), width=50)
+answer_entry = tk.Entry( root, font=("Arial", 14), width=60)
 answer_entry.pack(pady=10)
 
 submit_button = tk.Button(root, text="Submit", font=("Arial", 14), command=check_answer)
